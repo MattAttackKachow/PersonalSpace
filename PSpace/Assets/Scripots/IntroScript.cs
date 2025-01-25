@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextForwardTest : MonoBehaviour
+public class IntroScript : MonoBehaviour
 {
+    // Start is called before the first frame update
     public int currentSpeechBubble;
     public GameObject Text1;
     public GameObject Text2;
     public GameObject Text3;
     public GameObject Text4;
     public GameObject Text5;
-
     public GameObject Next;
     public GameObject Away;
     // Start is called before the first frame update
@@ -24,16 +24,16 @@ public class TextForwardTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            currentSpeechBubble ++;
+            currentSpeechBubble++;
         }
 
         if (currentSpeechBubble == 1)
         {
-            Text1.SetActive(true); 
+            Text1.SetActive(true);
             Text2.SetActive(false);
             Text3.SetActive(false);
             Text4.SetActive(false);
-            Text5.SetActive(false);
+
         }
 
         if (currentSpeechBubble == 2)
@@ -42,7 +42,6 @@ public class TextForwardTest : MonoBehaviour
             Text2.SetActive(true);
             Text3.SetActive(false);
             Text4.SetActive(false);
-            Text5.SetActive(false);
         }
 
         if (currentSpeechBubble == 3)
@@ -51,7 +50,6 @@ public class TextForwardTest : MonoBehaviour
             Text2.SetActive(false);
             Text3.SetActive(true);
             Text4.SetActive(false);
-            Text5.SetActive(false);
         }
 
         if (currentSpeechBubble == 4)
@@ -60,7 +58,6 @@ public class TextForwardTest : MonoBehaviour
             Text2.SetActive(false);
             Text3.SetActive(false);
             Text4.SetActive(true);
-            Text5.SetActive(false);
         }
 
         if (currentSpeechBubble == 5)
@@ -82,7 +79,5 @@ public class TextForwardTest : MonoBehaviour
             Away.SetActive(false);
             Next.SetActive(true);
         }
-
-
     }
 }

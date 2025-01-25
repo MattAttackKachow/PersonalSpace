@@ -8,7 +8,7 @@ public class Test : MonoBehaviour
     public GameObject Option2;
 
     public bool OptionChosen;
-    public GameObject ChoiceMenu;
+    public GameObject choiceMenu;
 
 
     // Start is called before the first frame update
@@ -26,7 +26,6 @@ public class Test : MonoBehaviour
             {
                 Option1.SetActive(true);
                 OptionChosen = true;
-                ChoiceMenu.SetActive(false);
                 Debug.Log("PressingDown");
 
             }
@@ -35,9 +34,14 @@ public class Test : MonoBehaviour
             {
                 Option2.SetActive(true);
                 OptionChosen = true;
-                ChoiceMenu.SetActive(false);
+                Debug.Log("again");
 
             }
+        }
+
+        if (OptionChosen == true) 
+        {
+            choiceMenu.SetActive(false);
         }
     }
 }
